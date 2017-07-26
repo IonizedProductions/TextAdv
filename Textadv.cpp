@@ -54,11 +54,11 @@ int main()
                     myfile << "Race:Human \n";
                     cout << "Please enter your first name: ";
                     cin >> firstname;
-                    cout << "Your first name is: " << firstname << endl;
+                    cout << "Your first name is:" << firstname << endl;
                     myfile << firstname << endl;
 
 
-                    cout << "Please enter your last name: \n";
+                    cout << "Please enter your last name: ";
                     cin >> lastname;
                     cout << "Your last name is:" << lastname << endl;
                     myfile << lastname << endl;
@@ -258,9 +258,61 @@ label2:
             }
         label6:
             "Newhope";
+            if (system("CLS"))
+                system("clear");
             cout << "You make it to the hanger bay. There is one Tie Fighter. \n";
-            cout << "";
+            cout << "As you hop into the Tie stormtroopers rush out of the exit you came from.\n";
+            cout << "You proceed to take of and leave the station. There are now two locations you can head. \n";
+            int choice4;
+            bool gameChoice = true;
+            while (gameChoice = false)
+                ;
+            {
+                cout << " 1 - Head to Yavin 4.\n";
+                cout << " 2 - Head to Aldeeran.\n";
+                cout << " 3 - View character.\n";
+
+                cout << " Enter your choice and press return: ";
+
+                cin >> choice4;
+                switch (choice4)
+                {
+                    case 1:
+                        cout << "You fire at two of the storm troopers and take them down. You hear "
+                                "more coming.\n";
+                        sleep(5);
+                        goto label6;
+                        system("PAUSE \n");
+                        break;
+
+                    case 2:
+
+                        cout << "You hide in a passage way as they pass.\n";
+                        goto label6;
+                        break;
+
+                    case 3:
+                        string line;
+                        ifstream myfile("Textsave.dat");
+                        if (myfile.is_open())
+                        {
+                            while (getline(myfile, line))
+                            {
+                                cout << line << '\n';
+                            }
+                            myfile.close();
+                        }
+
+                        else
+                            cout << "Unable to open file";
+                        sleep(6);
+                        if (system("CLS"))
+                            system("clear");
+                        goto label6;
+                        break;
+                }
             system("PAUSE \n");
         }
     }
+}
 }
