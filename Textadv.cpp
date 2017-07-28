@@ -24,7 +24,7 @@ int main()
     {
     label4:
         "Start";
-        cout << "Alpha Version 0.0.12 Creative Common License 2017 \n";
+        cout << "Alpha Version 0.0.14 Creative Common License 2017 \n";
         cout << "Last days of the Republic. \n";
         cout << "*******************************\n";
 
@@ -84,7 +84,7 @@ int main()
                 cout << "Our Republic has faced many challenges. From the Clone wars to the ";
                 cout << "rise of Emperor Palpatine. We shall prevail again. And when we do. They ";
                 cout << "will pay.\n";
-                sleep(5);
+                sleep(10);
                 if (system("CLS"))
                     system("clear");
                 goto label4;
@@ -103,6 +103,7 @@ int main()
                 break;
             case 5:
                 cout << "Credit to Greto for helping with some of the coding issues. \n";
+                cout << "Credit to Fluff for his help in this endevoure. \n";
                 cout << "Nick - Coder and designer of game. \n";
                 sleep(5);
                 if (system("CLS"))
@@ -233,6 +234,7 @@ label2:
                 case 2:
 
                     cout << "You hide in a passage way as they pass.\n";
+                    sleep(5);
                     goto label6;
                     break;
 
@@ -269,7 +271,7 @@ label2:
                 ;
             {
                 cout << " 1 - Head to Yavin 4.\n";
-                cout << " 2 - Head to Aldeeran.\n";
+                cout << " 2 - Head to Alderaan.\n";
                 cout << " 3 - View character.\n";
 
                 cout << " Enter your choice and press return: ";
@@ -278,17 +280,18 @@ label2:
                 switch (choice4)
                 {
                     case 1:
-                        cout << "You fire at two of the storm troopers and take them down. You hear "
-                                "more coming.\n";
+                        cout << "You fire the engines and begin to take off to Yavin. ";
+
                         sleep(5);
-                        goto label6;
+                        goto label7;
                         system("PAUSE \n");
                         break;
 
                     case 2:
 
-                        cout << "You hide in a passage way as they pass.\n";
-                        goto label6;
+                        cout << "You fire the engines and begin the trip to Alderaan\n";
+                        sleep(5);
+                        goto label8;
                         break;
 
                     case 3:
@@ -311,7 +314,33 @@ label2:
                         goto label6;
                         break;
                 }
-            system("PAUSE \n");
+            label7: "Strikes back";
+            if (system("CLS"))
+                system("clear");
+                cout << "As you head to Yavin IV you are contacted by Mon Mothma";
+                cout <<" Good she says. She then explains that you are needed \n";
+                cout << "on Yavin. The empire is attacking the planet.";
+                sleep (8);
+                if (system("CLS"))
+                    system("clear");
+                cout <<"Welcome to the end of the program for now. Still a work in progress. Thank you for playing this far. \n";
+
+                system("PAUSE \n");
+                return 0;
+
+            label8: "Return";
+            if (system("CLS"))
+                system("clear");
+                cout << "When you arrive at Aldeeran you see something that looks like a moon. You are not sure what it is.";
+                cout << "As you fly closer 20 ties fly out of the moon and start barreling to you.";
+                sleep (8);
+                if (system("CLS"))
+                    system("clear");
+                cout <<"Welcome to the end of the program for now. Still a work in progress. Thank you for playing this far. \n";
+
+                system("PAUSE \n");
+                return 0;
+
         }
     }
 }
